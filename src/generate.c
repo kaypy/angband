@@ -930,6 +930,7 @@ static struct chunk *cave_generate(struct player *p, int height, int width)
 {
 	const char *error = "no generation";
 	int i, tries = 0;
+	int x,y;
 	struct chunk *chunk = NULL;
 
 	/* Generate */
@@ -1048,6 +1049,11 @@ static struct chunk *cave_generate(struct player *p, int height, int width)
 	p->cave->obj_max = chunk->obj_max;
 	for (i = 0; i <= p->cave->obj_max; i++) {
 		p->cave->objects[i] = NULL;
+	}
+	for (y = 0; y < chunk->height; y++) {
+		for (x = 0; x < chunk->width; x++) {
+			p->cave->squares[y][x].feat = FEAT_UNDETECTED;
+		}
 	}
 	if (p->upkeep->light_level) {
 		wiz_light(chunk, p, false);

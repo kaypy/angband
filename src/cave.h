@@ -192,6 +192,8 @@ struct chunk {
 
 /* Nothing */
 extern int FEAT_NONE;
+extern int FEAT_UNDETECTED;
+extern int FEAT_MAXFEAT;
 
 /* Various */
 extern int FEAT_FLOOR;
@@ -390,6 +392,7 @@ int square_shopnum(struct chunk *c, int y, int x);
 int square_digging(struct chunk *c, int y, int x);
 const char *square_apparent_name(struct chunk *c, struct player *p, int y, int x);
 
+void square_markdetect(int y, int x);
 void square_memorize(struct chunk *c, int y, int x);
 void square_forget(struct chunk *c, int y, int x);
 void square_mark(struct chunk *c, int y, int x);

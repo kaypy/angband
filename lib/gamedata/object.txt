@@ -1775,6 +1775,9 @@ effect:DETECT_GOLD
 dice:22d40
 effect:SENSE_OBJECTS
 dice:22d40
+effect:DETECT_MARK
+dice:22d40
+
 
 name:Detect Invisible
 type:scroll
@@ -2446,7 +2449,8 @@ effect:DETECT_INVISIBLE_MONSTERS
 dice:500d500
 effect:DETECT_VISIBLE_MONSTERS
 dice:500d500
-
+effect:DETECT_MARK
+dice:22d40
 
 ### Buffs ###
 
@@ -3373,6 +3377,8 @@ dice:22d40
 effect:SENSE_OBJECTS
 dice:22d40
 time:50
+effect:DETECT_MARK
+dice:22d40
 
 name:Detection
 type:rod
@@ -3391,6 +3397,8 @@ dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 time:100
+effect:DETECT_MARK
+dice:22d40
 
 name:Magic Mapping
 type:rod

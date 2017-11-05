@@ -275,3 +275,6 @@ desc:Ends LOS, stops missiles, bolts, and beams, and reduces the radius of ball
 desc:spells.  May dissolve or be tunnelled to normal floor, and can be walked 
 desc:through by the player and monsters.
 
+name:undetected grid
+graphics: :w
+priority:1

@@ -399,6 +399,8 @@ dice:22d40
 effect:SENSE_OBJECTS
 dice:22d40
 desc:detects gold and objects nearby
+effect:DETECT_MARK
+dice:22d40
 
 name:DETECT_INVIS
 aim:0
@@ -429,6 +431,8 @@ dice:22d40
 effect:MAP_AREA
 dice:11d11
 desc:detects treasure and all creatures and maps an area nearby
+effect:DETECT_MARK
+dice:22d40
 
 name:DETECT_OBJECTS
 aim:0
@@ -436,6 +440,8 @@ power:10
 effect:DETECT_OBJECTS
 dice:22d40
 desc:detects all objects in the immediate area
+effect:DETECT_MARK
+dice:22d40
 
 name:ENCHANT_TOHIT
 aim:0

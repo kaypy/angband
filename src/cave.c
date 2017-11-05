@@ -36,6 +36,7 @@ struct feature *f_info;
 struct chunk *cave = NULL;
 
 int FEAT_NONE;
+int FEAT_UNDETECTED;
 int FEAT_FLOOR;
 int FEAT_CLOSED;
 int FEAT_OPEN;
@@ -52,6 +53,7 @@ int FEAT_QUARTZ_K;
 int FEAT_GRANITE;
 int FEAT_PERM;
 int FEAT_LAVA;
+int FEAT_MAXFEAT;
 
 /**
  * Global array for looping through the "keypad directions".
@@ -288,6 +290,8 @@ void set_terrain(void)
 	FEAT_GRANITE = lookup_feat("granite wall");
 	FEAT_PERM = lookup_feat("permanent wall");
 	FEAT_LAVA = lookup_feat("lava");
+	FEAT_UNDETECTED = lookup_feat("undetected grid");
+	FEAT_MAXFEAT = lookup_feat("undetected grid"); // last feat in terrain.txt
 }
 
 /**

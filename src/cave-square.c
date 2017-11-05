@@ -380,6 +380,7 @@ bool square_isplayer(struct chunk *c, int y, int x) {
 bool square_isknown(struct chunk *c, int y, int x) {
 	if (c != cave) return false;
 	if (player->cave == NULL) return false;
+	if (player->cave->squares[y][x].feat == FEAT_UNDETECTED) return false;	
 	return player->cave->squares[y][x].feat == FEAT_NONE ? false : true;
 }
 
@@ -1169,6 +1170,12 @@ const char *square_apparent_name(struct chunk *c, struct player *p, int y, int x
 	char *mimic_name = f_info[actual].mimic;
 	int f = mimic_name ? lookup_feat(mimic_name) : actual;
 	return f_info[f].name;
+}
+
+void square_markdetect(int y, int x) {
+	if (player->cave->squares[y][x].feat == FEAT_UNDETECTED) {
+		player->cave->squares[y][x].feat = FEAT_NONE;
+	}
 }
 
 void square_memorize(struct chunk *c, int y, int x) {

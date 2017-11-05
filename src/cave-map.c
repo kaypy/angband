@@ -173,7 +173,7 @@ void map_info(unsigned y, unsigned x, struct grid_data *g)
 			g->hallucinate = false;
 	}
 
-	assert((int) g->f_idx <= FEAT_PASS_RUBBLE);
+	assert((int) g->f_idx <= FEAT_MAXFEAT);
 	if (!g->hallucinate)
 		assert((int)g->m_idx < cave->mon_max);
 	/* All other g fields are 'flags', mostly booleans. */

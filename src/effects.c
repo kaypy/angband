@@ -2021,6 +2021,40 @@ bool effect_handler_DETECT_EVIL(effect_handler_context_t *context)
 }
 
 /**
+ * Marks detected area around the player.  The height to detect above and below the
+ * player is context->value.dice, the width either side of the player context->value.sides.
+ */
+bool effect_handler_DETECT_MARK(effect_handler_context_t *context)
+{
+	int x, y;
+	int x1, x2, y1, y2;
+	int y_dist = context->value.dice;
+	int x_dist = context->value.sides;
+
+	/* Pick an area to detect */
+	y1 = player->py - y_dist;
+	y2 = player->py + y_dist;
+	x1 = player->px - x_dist;
+	x2 = player->px + x_dist;
+
+	if (y1 < 0) y1 = 0;
+	if (x1 < 0) x1 = 0;
+	if (y2 > cave->height - 1) y2 = cave->height - 1;
+	if (x2 > cave->width - 1) x2 = cave->width - 1;
+
+
+	/* Scan the dungeon */
+	for (y = y1; y < y2; y++) {
+			for (x = x1; x < x2; x++) {
+			square_markdetect(y,x); // in bounds from above, not fully is OK
+		}
+	}
+
+	return true;
+}
+
+
+/**
  * Create stairs at the player location
  */
 bool effect_handler_CREATE_STAIRS(effect_handler_context_t *context)

@@ -203,6 +203,8 @@ dice:22d40
 effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 spell:Stinking Cloud:3:2:27:3
 effect:BALL:POIS:2
@@ -370,6 +372,8 @@ dice:22d40
 effect:SENSE_OBJECTS
 dice:22d40
 desc:Detects all treasure in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 book:magic book:[Resistances of Scarabtarices]:5:1
 
@@ -919,6 +923,8 @@ dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all treasure, objects and monsters in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 spell:Perception:20:20:80:20
 effect:IDENTIFY
@@ -1118,11 +1124,15 @@ dice:22d40
 effect:DETECT_OBJECTS
 dice:22d40
 desc:Detects all objects in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 spell:Detect Stairs:8:3:50:1
 effect:DETECT_STAIRS
 dice:44d60
 desc:Detects all stairs in a wide area.
+effect:DETECT_MARK
+dice:44d60
 
 spell:Stinking Cloud:21:12:50:10
 effect:BALL:POIS:2
@@ -1459,6 +1469,8 @@ spell:Detect Stairs:5:4:45:2
 effect:DETECT_STAIRS
 dice:44d60
 desc:Detects all stairs in a wide area.
+effect:DETECT_MARK
+dice:44d40
 
 spell:Stinking Cloud:7:5:40:3
 effect:BALL:POIS:2
@@ -1626,6 +1638,8 @@ dice:22d40
 effect:SENSE_OBJECTS
 dice:22d40
 desc:Detects all treasure in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 book:magic book:[Resistances of Scarabtarices]:5:1
 
@@ -2108,6 +2122,8 @@ dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all treasure, objects and monsters in the immediate area.
+effect:DETECT_MARK
+dice:22d40
 
 spell:Perception:25:25:80:16
 effect:IDENTIFY
