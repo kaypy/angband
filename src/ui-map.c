@@ -292,12 +292,6 @@ void grid_data_as_text(struct grid_data *g, int *ap, wchar_t *cp, int *tap,
 		if ((OPT(player, hp_changes_color)) && !(a & 0x80)) {
 			switch(player->chp * 10 / player->mhp)
 			{
-			case 10:
-			case  9: 
-			{
-				a = COLOUR_WHITE; 
-				break;
-			}
 			case  8:
 			case  7:
 			{
@@ -323,9 +317,14 @@ void grid_data_as_text(struct grid_data *g, int *ap, wchar_t *cp, int *tap,
 				a = COLOUR_RED;
 				break;
 			}
+			case 10:
+			case  9: 
 			default:
 			{
 				a = COLOUR_WHITE;
+				if (player->food < PY_FOOD_ALERT) {
+					a = COLOUR_L_UMBER;
+				}
 				break;
 			}
 			}
